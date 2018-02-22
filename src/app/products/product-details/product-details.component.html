@@ -1,0 +1,13 @@
+<mat-card *ngIf="product">
+  <mat-card-title>{{product.name}}</mat-card-title>
+  <mat-card-content>
+    <div>Brand: {{product.brand}}</div>
+    <div>Price: {{product.price}}</div>
+    <br />
+    <div><button mat-button (click)="addToCart(product)">Add to cart</button></div>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="!product">
+  <mat-card-title>Click on a product to see the details!</mat-card-title>
+</mat-card>
+

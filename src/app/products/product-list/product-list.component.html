@@ -1,0 +1,6 @@
+<mat-list>
+  <mat-list-item *ngFor="let product of products$ | async">
+    <a href="#" (click)="select($event, product.id)">{{product.name}}</a>
+  </mat-list-item>
+</mat-list>
+

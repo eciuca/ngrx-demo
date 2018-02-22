@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>Shopping Cart</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let shoppingCartItem of (shoppingCartItems$ | async); let i=index">
+        <div>
+          <p>Name: {{shoppingCartItem.name}} | Price: {{shoppingCartItem.price}}
+            <button mat-icon-button color="warn" (click)="removeFromCart(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </p>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
